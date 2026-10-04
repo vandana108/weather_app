@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">SkyCast</div>
+        <div class="topbar-actions">
+          <button class="ghost-btn">Today</button>
+          <button class="primary-btn">Week</button>
+        </div>
+      </header>
+
+      <main class="weather-layout">
+        <section class="search-panel">
+          <div class="search-box">
+            <input id="cityInput" type="text" placeholder="Search city" value="Delhi" />
+            <button id="searchBtn">Search</button>
+          </div>
+
+          <div id="errorBox" class="error hidden"></div>
+
+          <div id="weatherCard" class="current-card">
+            <div class="city-row">
+              <div>
+                <p class="label">Current location</p>
+                <h2 id="cityName">Delhi</h2>
+              </div>
+              <div class="weather-pill" id="weatherText">Sunny</div>
+            </div>
+
+            <div class="temp-row">
+              <div class="temp-block">
+                <div id="weatherIcon" class="main-icon">☀️</div>
+                <div id="currentTemp" class="temp-value">32°</div>
+              </div>
+              <div class="temp-meta">
+                <p>Feels like <strong id="feelsLike">34°</strong></p>
+                <p>Humidity <strong id="humidity">44%</strong></p>
+              </div>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-label">Wind</span>
+                <strong id="windSpeed">12 km/h</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">UV</span>
+                <strong>Moderate</strong>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Rain</span>
+                <strong>10%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="forecast-panel">
+          <div class="panel-header">
+            <h3>Forecast</h3>
+            <span>Next 5 days</span>
+          </div>
+          <div id="forecastList" class="forecast-list"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
